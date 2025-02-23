@@ -19,40 +19,13 @@
    MODS=+923308437581
 **Owner** HaSSaN BrOvHi Tech 
   node index.js
-  
-## Commands
-
-### Basic Commands
-- **Ping**: Check if the bot is online.
-  ```
-  !ping
-  ```
-  **Response**: `Pong!`
-
-- **Help**: Get a list of available commands.
-  ```
-  !help
-  ```
-  **Response**: A list of commands and their descriptions.
-
-### Media Commands
-- **Send Image**: Send an image.
-  ```
-  !media image
-  ```
-  **Response**: Sends an image with a caption.
-
-- **Send Video**: Send a video.
-  ```
-  !media video
-  ```
-  **Response**: Sends a video with a caption.
-
-- **Send Sticker**: Send a sticker.
-  ```
-  !media sticker
-  ```
-  **Response**: Sends a sticker.
+  ## 📢 Support & Community
+Join our official support channels:
+- 📍 WhatsApp Group: [Join Support Group](https://chat.whatsapp.com/FnwXqp57x8P7qTCxOG05sN)
+- 📣 Whatsapp Channel: [News Channel]([https://whatsapp.com/channel/0029Vb35klIICVfpFtp1xN3Sl]))
+- 💬 Discussion Group: [Telegram Group](https://t.me/yoursupportgroup)
+- 📺 YouTube: [Tutorial Videos](https://youtube.com/@yourchannel)
+- 🌐 Website: [Official Site](https://yourwebsite.com)
   ## Contributing
 Contributions are welcome! If you'd like to contribute to Brovhi MD BoT, please follow these steps:
 1. Fork the repository.
