@@ -1,1 +1,65 @@
-
+{
+  "name": "Brovhi WhatsApp MD Bot",
+  "description": "A multi-functional WhatsApp Multi-Device bot for fun, utilities, and more.",
+  "repository": "https://github.com/yourusername/brovhi-whatsapp-md-bot.git",
+  "logo": "https://i.imgur.com/your-logo.png", // Add a logo URL for your bot
+  "keywords": [
+    "whatsapp-bot",
+    "multi-device",
+    "brovhi-md",
+    "utilities",
+    "fun"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs" // Node.js buildpack for Heroku
+    }
+  ],
+  "env": {
+    "PREFIX": {
+      "description": "The prefix for bot commands (e.g., !)",
+      "value": "!"
+    },
+    "SESSION_ID": {
+      "description": "A unique session ID for the bot",
+      "value": "brovhi-md-session"
+    },
+    "OWNER_NUMBER": {
+      "description": "The WhatsApp number of the bot owner",
+      "value": "+923308437581"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection string (if using a database)",
+      "value": "your_mongodb_connection_string"
+    },
+    "OPENAI_API_KEY": {
+      "description": "OpenAI API key for AI-based features",
+      "value": "your_openai_api_key"
+    },
+    "WEATHER_API_KEY": {
+      "description": "API key for weather data",
+      "value": "your_weather_api_key"
+    },
+    "MODERATION_API_KEY": {
+      "description": "API key for content moderation (optional)",
+      "value": "your_moderation_api_key",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free" // Use free dyno for worker process
+    }
+  },
+  "addons": [
+    {
+      "plan": "mongodb:sandbox" // Free MongoDB add-on for Heroku
+    }
+  ]
+}
+git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add heroku https://git.heroku.com/your-app-name.git
+   git push heroku master
