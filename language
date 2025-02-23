@@ -1,1 +1,45 @@
+module.exports = {
+    // General messages
+    welcome: "Welcome to the bot!",
+    error: "An error occurred. Please try again later.",
 
+    // Ping command
+    ping: {
+        response: "Pong!",
+    },
+
+    // Help command
+    help: {
+        description: "Here are the commands you can use:",
+        commands: {
+            ping: "Check if the bot is online.",
+            help: "Show this help message.",
+            greet: "Greet the user based on the time of day.",
+        },
+    },
+
+    // Greet command
+    greet: {
+        morning: "Good morning!",
+        afternoon: "Good afternoon!",
+        evening: "Good evening!",
+        night: "Good night!",
+    },
+
+    // Admin-only messages
+    admin: {
+        notAdmin: "You are not authorized to use this command.",
+    },
+
+    // Error messages
+    errors: {
+        invalidCommand: "Invalid command. Use !help to see available commands.",
+        missingArgs: "Missing arguments. Please check the command usage.",
+    },
+
+    // Custom responses
+    custom: {
+        thanks: "You're welcome!",
+        bye: "Goodbye! Have a great day!",
+    },
+};
