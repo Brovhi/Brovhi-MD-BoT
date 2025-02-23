@@ -1,8 +1,8 @@
 {
   "name": "Brovhi WhatsApp MD Bot",
   "description": "A multi-functional WhatsApp Multi-Device bot for fun, utilities, and more.",
-  "repository": "https://github.com/yourusername/brovhi-whatsapp-md-bot.git",
-  "logo": "https://i.imgur.com/your-logo.png", // Add a logo URL for your bot
+  "repository": "https://github.com/Brovhi/brovhi-whatsapp-md-bot.git",
+  "logo": "https://i.imgur.com/your-logo.png", // https://files.catbox.moe/pzvp61.jpeg,
   "keywords": [
     "whatsapp-bot",
     "multi-device",
@@ -58,8 +58,3 @@
     }
   ]
 }
-git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add heroku https://git.heroku.com/your-app-name.git
-   git push heroku master
