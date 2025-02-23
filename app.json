@@ -12,7 +12,7 @@
   ],
   "buildpacks": [
     {
-      "url": "heroku/nodejs" // Node.js buildpack for Heroku
+      "url": "heroku/nodejs" 
     }
   ],
   "env": {
@@ -49,12 +49,12 @@
   "formation": {
     "worker": {
       "quantity": 1,
-      "size": "free" // Use free dyno for worker process
+      "size": "free"
     }
   },
   "addons": [
     {
-      "plan": "mongodb:sandbox" // Free MongoDB add-on for Heroku
+      "plan": "mongodb:sandbox"
     }
   ]
 }
