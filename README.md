@@ -22,9 +22,9 @@
   ## 📢 Support & Community
 Join our official support channels:
 - 📍 WhatsApp Group: [Join Support Group](https://chat.whatsapp.com/FnwXqp57x8P7qTCxOG05sN)
-- 📣 Whatsapp Channel: [News Channel]([https://whatsapp.com/channel/0029Vb35klIICVfpFtp1xN3Sl]))
-- 💬 Discussion Group: [Telegram Group](https://t.me/yoursupportgroup)
-- 📺 YouTube: [Tutorial Videos](https://youtube.com/@yourchannel)
+- 📣 Whatsapp Channel: [News Channel]([https://whatsapp.com/channel/0029Vb35klIICVfpFtp1xN3Sl)
+- 💬 Discussion owner num: [connect owner](wa.me/+923308437581)
+- 📺 YouTube: [Tutorial Videos]([https://youtube.com/@yourchannel](https://www.youtube.com/@HassanBrohi-cd7xp))
 - 🌐 Website: [Official Site](https://yourwebsite.com)
   ## Contributing
 Contributions are welcome! If you'd like to contribute to Brovhi MD BoT, please follow these steps:
