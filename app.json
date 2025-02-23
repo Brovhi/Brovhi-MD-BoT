@@ -1,60 +1,58 @@
 {
-  "name": "Brovhi WhatsApp MD Bot",
-  "description": "A multi-functional WhatsApp Multi-Device bot for fun, utilities, and more.",
-  "repository": "https://github.com/Brovhi/brovhi-whatsapp-md-bot.git",
-  "logo": "https://files.catbox.moe/pzvp61.jpeg", 
-  "keywords": [
-    "whatsapp-bot",
-    "multi-device",
-    "brovhi-md",
-    "utilities",
-    "fun"
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs" 
+    "name": "BrOvHi MD",
+    "description": "ᴛᴀɪꜰᴜʀ-x ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
+    "repository": "https://github.com/Brovhi/Brovhi-MD-BoT",
+    "logo": "https://files.catbox.moe/pzvp61.jpeg",
+    "keywords": [
+        "nodejs",
+        "Bot",
+        "WhatsApp Bot",
+        "WhatsApp Automation",
+        "Multi Device"
+    ],
+    "env": {
+        "SESSION_ID": {
+            "description": "Type the Session-ID you got from scaning QR",
+            "required": false,
+            "value": ""
+        },
+        "DATABASE_URL": {
+            "description": "Enter a PostgresSQL Database's External Url",
+            "required": true,
+            "value": "postgres://vajiratech_user:oSIFl2xmSojMZ0rkzdd0g0W6msuVTpNN@dpg-cpd7fjv109ks73e5gtig-a.frankfurt-postgres.render.com/vajiratech"
+        } "
+        },
+        "HEROKU_API_KEY": {
+            "description": "Enter your Heroku account Api key",
+            "required": true,
+            "value": ""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Enter you pushed app Name",
+            "required": true,
+            "value": ""
+        },
+        "WORK_TYPE": {
+            "description": "Add the worktype of the Bot ( private ,public , onlygroup )",
+            "required": true,
+            "value": "private"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        },
+        {
+            "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "standard-1x"
+        }
     }
-  ],
-  "env": {
-    "PREFIX": {
-      "description": "The prefix for bot commands (e.g., !)",
-      "value": "!"
-    },
-    "SESSION_ID": {
-      "description": "A unique session ID for the bot",
-      "value": "brovhi-md-session"
-    },
-    "OWNER_NUMBER": {
-      "description": "The WhatsApp number of the bot owner",
-      "value": "+923308437581"
-    },
-    "MONGODB_URI": {
-      "description": "MongoDB connection string (if using a database)",
-      "value": "your_mongodb_connection_string"
-    },
-    "OPENAI_API_KEY": {
-      "description": "OpenAI API key for AI-based features",
-      "value": "your_openai_api_key"
-    },
-    "WEATHER_API_KEY": {
-      "description": "API key for weather data",
-      "value": "your_weather_api_key"
-    },
-    "MODERATION_API_KEY": {
-      "description": "API key for content moderation (optional)",
-      "value": "your_moderation_api_key",
-      "required": false
-    }
-  },
-  "formation": {
-    "worker": {
-      "quantity": 1,
-      "size": "free"
-    }
-  },
-  "addons": [
-    {
-      "plan": "mongodb:sandbox"
-    }
-  ]
 }
