@@ -20,7 +20,7 @@
             "description": "Enter a PostgresSQL Database's External Url",
             "required": true,
             "value": "postgres://vajiratech_user:oSIFl2xmSojMZ0rkzdd0g0W6msuVTpNN@dpg-cpd7fjv109ks73e5gtig-a.frankfurt-postgres.render.com/vajiratech"
-        } "
+        }"
         },
         "HEROKU_API_KEY": {
             "description": "Enter your Heroku account Api key",
