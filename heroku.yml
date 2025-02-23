@@ -1,0 +1,39 @@
+# heroku.yml
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+    - plan: mongodb-addon
+      type: production
+    - plan: heroku-redis
+      type: hobby
+  buildpacks:
+    - url: heroku/nodejs
+    - url: heroku/python
+    - url: https://github.com/Brovhi/heroku-buildpack-ffmpeg-latest
+    - url: https://github.com/Brovhi/heroku-imagemagick-buildpack
+
+build:
+  config:
+    NPM_CONFIG_PRODUCTION: false
+    YARN_PRODUCTION: false
+  scripts:
+    postcompile:
+      - npm run build
+
+run:
+  web: npm start
+
+release:
+  command:
+    - npm run migrate
+    - npm run seed
+
+# Environment variables (example - use Heroku Dashboard for actual secrets)
+config:
+  SESSION_ID: "Brovhi-MD-Session"
+  PREFIX: "!"
+  OWNER_NUMBER: "923308437581@s.whatsapp.net"
+  MODE: "public"
+  HEROKU_APP_NAME: $HEROKU_APP_NAME
+  HEROKU_API_KEY: $HEROKU_API_KEY
