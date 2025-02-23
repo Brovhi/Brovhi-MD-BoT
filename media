@@ -1,0 +1,64 @@
+const en = require('../languages/en'); // Load the English language file
+
+module.exports = {
+    name: 'media',
+    description: 'Handle media commands (image, video, sticker, audio).',
+    async execute(client, message) {
+        const args = message.body.split(' ');
+        const command = args[1]; // e.g., !media image, !media video, !media sticker, !media audio
+
+        switch (command) {
+            case 'image':
+                // Send an image
+                const imageUrl = 'https://example.com/path/to/image.jpg'; // Replace with your image URL
+                await client.sendMessage(message.from, {
+                    image: { url: imageUrl },
+                    caption: en.media.imageCaption,
+                });
+                break;
+
+            case 'video':
+                // Send a video
+                const videoUrl = 'https://example.com/path/to/video.mp4'; // Replace with your video URL
+                await client.sendMessage(message.from, {
+                    video: { url: videoUrl },
+                    caption: en.media.videoCaption,
+                });
+                break;
+
+            case 'sticker':
+                // Send a sticker
+                const stickerUrl = 'https://example.com/path/to/sticker.webp'; // Replace with your sticker URL
+                await client.sendMessage(message.from, {
+                    sticker: { url: stickerUrl },
+                });
+                break;
+
+            case 'audio':
+                // Send an audio file (e.g., song)
+                const audioUrl = 'https://example.com/path/to/song.mp3'; // Replace with your audio URL
+                await client.sendMessage(message.from, {
+                    audio: { url: audioUrl },
+                    mimetype: 'audio/mp3', // Specify the MIME type
+                });
+                break;
+
+            default:
+                // Invalid media command
+                await message.reply(en.errors.invalidCommand);
+                break;
+        }
+    },
+};
+module.exports = {
+    // Previous messages...
+
+    // Media messages
+    media: {
+        imageCaption: "Here's an image for you!",
+        videoCaption: "Here's a video for you!",
+        audioCaption: "Here's a song for you!",
+    },
+
+    // Previous messages...
+};
