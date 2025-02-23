@@ -1,1 +1,109 @@
+const en = require('../languages/en'); // Load the English language file
+
+module.exports = {
+    name: 'moderation',
+    description: 'Moderation commands for admins.',
+    async execute(client, message) {
+        const args = message.body.split(' ');
+        const command = args[1]; // e.g., !moderation ban, !moderation mute
+
+        // Check if the user is an admin
+        if (!config.mods.includes(message.author)) {
+            return message.reply(en.admin.notAdmin);
+        }
+
+        switch (command) {
+            case 'ban':
+                // Ban a user
+                const userToBan = args[2];
+                if (!userToBan) {
+                    return message.reply(en.errors.missingArgs);
+                }
+                await message.reply(`Banned user: ${userToBan}`);
+                break;
+
+            case 'mute':
+                // Mute a user
+                const userToMute = args[2];
+                if (!userToMute) {
+                    return message.reply(en.errors.missingArgs);
+                }
+                await message.reply(`Muted user: ${userToMute}`);
+                break;
+
+            default:
+                // Invalid command
+                await message.reply(en.errors.invalidCommand);
+                break;
+        }
+    },
+};
+const en = require('../languages/en'); // Load the English language file
+
+module.exports = {
+    name: 'fun',
+    description: 'Fun commands for entertainment.',
+    async execute(client, message) {
+        const args = message.body.split(' ');
+        const command = args[1]; // e.g., !fun joke, !fun quote
+
+        switch (command) {
+            case 'joke':
+                // Send a joke
+                const jokes = [
+                    "Why don't scientists trust atoms? Because they make up everything!",
+                    "Why did the scarecrow win an award? Because he was outstanding in his field!",
+                ];
+                const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+                await message.reply(randomJoke);
+                break;
+
+            case 'quote':
+                // Send a random quote
+                const quotes = [
+                    "The only limit to our realization of tomorrow is our doubts of today. – Franklin D. Roosevelt",
+                    "Life is 10% what happens to us and 90% how we react to it. – Charles R. Swindoll",
+                ];
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                await message.reply(randomQuote);
+                break;
+
+            default:
+                // Invalid command
+                await message.reply(en.errors.invalidCommand);
+                break;
+        }
+    },
+};const axios = require('axios');
+const en = require('../languages/en'); // Load the English language file
+
+module.exports = {
+    name: 'weather',
+    description: 'Get weather information for a city.',
+    async execute(client, message) {
+        const args = message.body.split(' ');
+        const city = args[1]; // e.g., !weather London
+
+        if (!city) {
+            return message.reply(en.errors.missingArgs);
+        }
+
+        try {
+            // Fetch weather data from an API
+            const apiKey = 'your_api_key'; // Replace with your API key
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
+            const weatherData = response.data;
+
+            // Send weather information
+            const weatherMessage = `Weather in ${weatherData.name}:
+- Temperature: ${weatherData.main.temp}°C
+- Humidity: ${weatherData.main.humidity}%
+- Weather: ${weatherData.weather[0].description}`;
+            await message.reply(weatherMessage);
+        } catch (error) {
+            console.error(error);
+            await message.reply(en.errors.error);
+        }
+    },
+};
 
