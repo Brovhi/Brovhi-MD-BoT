@@ -17,6 +17,7 @@
 - SESSION_ID=my_bot_session
    PREFIX=!
    MODS=+923308437581
+**Owner** HaSSaN BrOvHi Tech 
   node index.js
   
 ## Commands
