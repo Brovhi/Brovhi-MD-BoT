@@ -1,0 +1,55 @@
+{
+  "name": "brovhi-md-bot",
+  "version": "2.0.0",
+  "description": "Multi-Device WhatsApp Bot with Advanced Features",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "dev": "nodemon bot.js --watch . --ext js,json",
+    "build": "npm install && npm run fix",
+    "fix": "npm audit fix --force",
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pm2:start": "pm2 start bot.js --name brovhi-md",
+    "pm2:logs": "pm2 logs brovhi-md"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "multi-device",
+    "automation",
+    "brovhi-md",
+    "baileys"
+  ],
+  "author": "Your Name <Hassan>",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.3.0",
+    "qrcode-terminal": "^0.12.0",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.0",
+    "sharp": "^0.33.2",
+    "axios": "^1.6.2",
+    "ffmpeg-static": "^5.2.0",
+    "moment-timezone": "^0.5.43",
+    "node-cron": "^3.0.2",
+    "form-data": "^4.0.0",
+    "google-it": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "eslint": "^8.56.0",
+    "pm2": "^5.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brovhi/brovhi-md-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/https://github.com/Brovhi/brovhi-md-bot.git/brovhi-md-bot/issues"
+  },
+  "homepage": "https://github.com/Brovhi/brovhi-md-bot#readme"
+}
