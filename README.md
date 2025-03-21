@@ -14,7 +14,9 @@
 - **Multi-Language Support**: Supports multiple languages (e.g., English).
 - ![Brovhi MD BoT Logo](https://i.imgur.com/abc123.png)
 - npm install
-- SESSION_ID=my_bot_session
+const pairingData = await generatePairingLink();
+   console.log(pairingData.qrCode); // Show QR code to user
+   console.log(`Pairing Code: ${pairingData.deviceCode}`);
    PREFIX=!
    MODS=+923308437581
 **Owner** HaSSaN BrOvHi Tech 
